@@ -26,6 +26,32 @@ First, run the development server:
 
 
 cleark - User Authentication - most comprehensive User managament Platform 
+
+Backend 
+
+Database - supabase - postgresSQL DB - Prisma ORM - [Supabase](https://supabase.com/)
+                ORM stands for object-relational mapping, a programming technique that connects object-oriented programming languages with relational databases. ORMs allow developers to work with data using the programming language's objects, instead of writing SQL queries. 
+                How ORMs work
+                Create a layer
+                ORMs use metadata descriptors to create a layer between the programming language and the database. 
+                Translate data
+                ORMs translate data between the database and the programming language. 
+                Generate SQL code
+                ORMs generate SQL code to insert, update, create, and delete data in the database. 
+                Manage data
+                ORMs manage the application's data needs, so developers don't need to write low-level code. 
+                Benefits of ORMs
+                Increased productivity: ORMs remove the need for boilerplate code and awkward techniques, which can increase developer productivity. 
+                Standardized interfaces: ORMs standardize interfaces, which can speed up development time. 
+                Consistent view of objects: ORMs allow programmers to maintain a consistent view of objects over time. 
+
+Security - Arcjet - Bot detection - [Secure your application](https://arcjet.com/)
+
+
+InnGest - [Inngest]-(https://www.inngest.com/)for handling queing, recurring transactions, montly financial reports , Budget alerts to user & cron Jobs - 
+
+
+
 ```bash
 npm run dev
 # or
