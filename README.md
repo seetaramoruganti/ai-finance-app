@@ -20,8 +20,32 @@ Install Packages
 
 - Shadcn UI - is built on top of tailwind-css 
         - npx shadcn@latest init
+        used components from shadcn ui -
+                - Badge
+                - Button
+                - Calender
+                - Card
+                - Checkbox
+                - Drawer
+                - Dropdown-menu
+                - Input
+                - Popover
+                - Progress
+                - Select
+                - Switch
+                - Table
+                - Tooltip
 First, run the development server:
 
+
+import {
+  BarChart3,
+  Receipt,
+  PieChart,
+  CreditCard,
+  Globe,
+  Zap,
+} from "lucide-react";
 
 
 
