@@ -93,6 +93,26 @@ Used Prisma Queries (built on top of SQL Queries)
 
 
 
+
+Routing in nextjs
+        - A route group can be created by wrapping a folder's name in parenthesis: (folderName)- auth, main, 
+        [folder]	Dynamic route segment - [id]
+        [...folder]	Catch-all route segment - 
+        [[...folder]]	Optional catch-all route segment -[[...sign-in]]
+
+
+
+
+Server actions - API calls - actions folder
+
+
+
+
+React - hook- forms  - ZOD -
+        - npm i react-hook-form zod @hookform/resolvers --legacy-peer-deps
+        - zod - TypeScript form  validation library
+
+
 ```bash
 npm run dev
 # or
