@@ -23,6 +23,8 @@ import {
 } from "./ui/select";
 import { Switch } from "./ui/switch";
 import { createAccount } from "@/actions/dashboard";
+import useFetch from "@/hooks/use-fetch";
+import { Loader2 } from "lucide-react";
 
 const CreateAccountDrawer = ({ children }) => {
   const [open, setOpen] = useState(false);
@@ -44,8 +46,15 @@ const CreateAccountDrawer = ({ children }) => {
     },
   });
 
+  const {
+    data: newAccont,
+    loading: createAccountLoading,
+    fn: createAccountfn,
+    error,
+  } = useFetch(createAccount);
+
   const onSubmit = async (data) => {
-    await createAccount(data);
+    await createAccountfn(data);
   };
 
   return (
@@ -146,12 +155,24 @@ const CreateAccountDrawer = ({ children }) => {
 
               <div className="flex gap-4 pt-4">
                 <DrawerClose asChild>
-                  <Button type="button" variant="outline" className="flex-1">
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="flex-1"
+                    disable={createAccountLoading}
+                  >
                     Cancel
                   </Button>
                 </DrawerClose>
                 <Button type="submit" className="flex-1">
-                  Create Account
+                  {createAccountLoading ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Creating...
+                    </>
+                  ) : (
+                    "Create Account"
+                  )}
                 </Button>
               </div>
             </form>

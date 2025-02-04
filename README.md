@@ -19,7 +19,7 @@ Installing devDependencies:
 Install Packages 
 
 - Shadcn UI - is built on top of tailwind-css 
-        - npx shadcn@latest init
+        - npx shadcn@latest component-name --legacy-peer-deps
         used components from shadcn ui -
                 - Badge
                 - Button
@@ -35,6 +35,7 @@ Install Packages
                 - Switch
                 - Table
                 - Tooltip
+                - sonner
 First, run the development server:
 
 
