@@ -49,11 +49,16 @@ import {
 
 
 
-cleark - User Authentication - most comprehensive User managament Platform 
+clerk - User Authentication - most comprehensive User managament Platform 
 
-Backend 
+** Backend **
 
 Database - supabase - postgresSQL DB - Prisma ORM - [Supabase](https://supabase.com/)
+
+npm i -D prisma --legacy-peer-deps
+        - (-D) means, Installted as Developement Package wont't be used for Production. 
+        - npx prisma init
+
                 ORM stands for object-relational mapping, a programming technique that connects object-oriented programming languages with relational databases. ORMs allow developers to work with data using the programming language's objects, instead of writing SQL queries. 
                 How ORMs work
                 Create a layer
@@ -73,6 +78,18 @@ Security - Arcjet - Bot detection - [Secure your application](https://arcjet.com
 
 
 InnGest - [Inngest]-(https://www.inngest.com/)for handling queing, recurring transactions, montly financial reports , Budget alerts to user & cron Jobs - 
+
+
+Schema Image - public/AI-finance-app_DB_schema.png
+
+                1. users table( clerkUserId, name, email, ImageURL, createdAt, updatedAt, id) with 1:1 realation with budget table and 1:many with accounts, trasactions tables
+                2. accounts table(id, name, type, balance, isDefault, userId(foreign key for users table), createdAt, updatedAt) with 1: many relation with          transactions.
+                3. transactions table( id, type(income/ expense),  userId, amount, amountId(foreign key for account table), description, date, category, receiptUrl,            isRecurring(salaries, subscriptions can be either debit/ credit ), recurringInterval(daily, montly, custom intervals), nextRecurringDate, lastProcessed, status, createdAt, updatedAt) 
+                4. budgets table ( id, amount, userId, lastAlertSent(inngest function to send email alerts- last alert sent ), createdAt, updatedAt)
+
+
+Used Prisma Queries (built on top of SQL Queries)
+
 
 
 
