@@ -7,7 +7,6 @@ import {
   DrawerContent,
   DrawerHeader,
   DrawerTitle,
-  DrawerDescription,
 } from "./ui/drawer";
 import { Button } from "./ui/button";
 import { DrawerFooter, DrawerClose } from "./ui/drawer";
@@ -15,14 +14,15 @@ const CreateAccountDrawer = ({ children }) => {
   const [open, setOpen] = useState(false);
   return (
     <div>
-      <Drawer>
-        <DrawerTrigger open={open} onClick={setOpen}>
-          {children}
-        </DrawerTrigger>
+      <Drawer open={open} onClick={setOpen}>
+        <DrawerTrigger asChild>{children}</DrawerTrigger>
         <DrawerContent>
           <DrawerHeader>
-            <DrawerTitle>Are you absolutely sure?</DrawerTitle>
+            <DrawerTitle>Create New Account</DrawerTitle>
           </DrawerHeader>
+          <div>
+            <form action=""></form>
+          </div>
         </DrawerContent>
       </Drawer>
     </div>

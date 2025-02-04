@@ -111,6 +111,8 @@ Server actions - API calls - actions folder
 React - hook- forms  - ZOD -
         - npm i react-hook-form zod @hookform/resolvers --legacy-peer-deps
         - zod - TypeScript form  validation library
+        Schema Validation Library:
+        Zod is a TypeScript-first library for defining and validating data structures (schemas). It helps you ensure that the data you're working with conforms to the expected format. 
 
 
 ```bash
